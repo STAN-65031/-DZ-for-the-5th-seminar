@@ -29,6 +29,9 @@ def InputNumbers(inputText):
         try:
             number = int(input(f"{inputText}"))
             okey = True
+            if number <= 0:
+                okey = False
+                print("Нужно больше слов...")
         except ValueError:
             print("Какое-то неправильное число!")
     return number
